@@ -1,1 +1,1 @@
-# Scene_text-detection-and-recognition
+# Scene_text_detection_and_recognition
