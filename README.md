@@ -5,6 +5,11 @@ We use yolov5 to capture the text of the scene.
 
 YoloV5 extracts two types of objects from the scene, the first type is Chinese character and the second type is English\Numeric string or character.
 
+### requirements
+```
+pip install -r requirement.txt
+```
+
 ### Train
 ```
 python train.py --img 1365 --rect --batch 8 --epochs 300 --data data/high_level.yaml --weights yolov5x6.pt --device 0
