@@ -1,0 +1,16 @@
+# Example usage: python train.py --data data/aicup.yaml
+# python train.py --img 1365 --rect --batch 8 --epochs 300 --data data/high_level.yaml --weights runs\train\exp\weights\last.pt --device 0
+# 更改 device
+# 更改 weight
+# Train/val/test sets as 1) dir: path/to/imgs, 2) file: path/to/imgs.txt, or 3) list: [path/to/imgs1, path/to/imgs2, ..]
+path: datasets/high_level  # dataset root dir
+train: images/train  # train images (relative to 'path') 128 images
+val: images/val  # val images (relative to 'path') 128 images
+test: images/test # test images (optional)
+
+# Classes
+nc: 2  # number of classes
+names: ['ch', 'engNum'] 
+
+
+#python train.py --img 1365 --rect --batch 10 --epochs 20 --data data/high_level.yaml --weights runs/train/exp3/weights/best.pt --device 0
