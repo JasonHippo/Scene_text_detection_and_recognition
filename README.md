@@ -3,7 +3,7 @@
 ## Stage One detection
 We use yolov5 to capture the text of the scene.
 
-YoloV5 will extract two types of objects from the scene, the first type is Chinese character and the second type is English\Numeric string or character.
+YoloV5  extract two types of objects from the scene, the first type is Chinese character and the second type is English\Numeric string or character.
 
 How to generate GT for YOLO training ?
 
