@@ -12,7 +12,7 @@ pip install -r yolov5/requirements.txt
 
 ### Train
 ```
-python train.py --img 1365 --rect --batch 8 --epochs 300 --data data/high_level.yaml --weights yolov5x6.pt --device 0
+python yolov5/train.py --img 1365 --rect --batch 8 --epochs 300 --data yolov5/data/high_level.yaml --weights yolov5/yolov5x6.pt --device 0
 ```
 
 
@@ -20,5 +20,5 @@ python train.py --img 1365 --rect --batch 8 --epochs 300 --data data/high_level.
 
 Donwload our Training weights to test on private datasets (https://drive.google.com/drive/folders/1NkuSVJcCduJ1YiDAhk2xj4yzkRxn0CWs?usp=sharing)
 ```
-python detect.py --source datasets/high_level/images/private/ --weights runs/train/exp4/weights/best.pt --img 1408 --save-txt --save-conf  --conf-thres 0.7 --iou-thres 0.45 --augment
+python yolov5/detect.py --source yolov5/datasets/high_level/images/private/ --weights yolov5/runs/train/exp4/weights/best.pt --img 1408 --save-txt --save-conf  --conf-thres 0.7 --iou-thres 0.45 --augment
 ```
