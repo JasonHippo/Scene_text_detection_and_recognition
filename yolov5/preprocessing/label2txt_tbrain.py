@@ -8,8 +8,7 @@ count = 0
 count_v = 0; count_h = 0
 total = 0
 for i in range(1, 15188+1):
-    #img = cv2.imread("./train/img/img_"+str(i)+".jpg")
-    with open('./train/json/img_'+str(i)+'.json', encoding="utf-8") as json_file:
+    with open('./data/t-brain/json/img_'+str(i)+'.json', encoding="utf-8") as json_file:
         data = json.load(json_file)
         for shape in data["shapes"]:
             if shape["group_id"] == 1 or shape["group_id"] == 2 or shape["group_id"] == 4:
@@ -30,7 +29,7 @@ for i in range(1, 15188+1):
                 b_h = (y2 - y1) / int(data["imageHeight"])
                 x_c = ((x2 - x1) / 2 + x1) / int(data["imageWidth"])
                 y_c = ((y2 - y1) / 2 + y1) / int(data["imageHeight"])
-                with open("../datasets/high_level/labels/train/img_{}.txt".format(str(i)), 'a') as txt:
+                with open("./data/t-brain/yolotxt/img_{}.txt".format(str(i)), 'a') as txt:
                     txt.write("{} {} {} {} {}\n".format(class_name, x_c, y_c, b_w, b_h))
         total+=count
         print("img_"+str(i)+" found:", count)
