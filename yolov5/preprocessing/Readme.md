@@ -13,5 +13,3 @@ python label2txt_rects.py
 Move all images to the yolov5/datasets/high_level/train/images and all txts to the yolov5/datasets/high_level/train/labels.
 
 You should also create val and test images and json . It depends on your split train/val/test strategy.
-
-Done!
