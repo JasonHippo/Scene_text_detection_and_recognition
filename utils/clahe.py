@@ -1,7 +1,7 @@
 import cv2
 import os
 import numpy as np
-
+import argparse
 
 def clahe_operate(src_path,trg_path):
     
@@ -17,3 +17,9 @@ def clahe_operate(src_path,trg_path):
         clached_img = cv2.cvtColor(lab, cv2.COLOR_LAB2BGR)
         cv2.imwrite(trg_path+"/"+i, clached_img)
 
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--src_path', help='the path of original image')
+    parser.add_argument('--dst_path', help='the path of result image')
+    opt = parser.parse_args()
+    clahe_operate(opt.src_path,opt.dst_path)
