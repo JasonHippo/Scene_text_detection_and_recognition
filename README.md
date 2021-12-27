@@ -6,16 +6,17 @@ T-Brain：繁體中文場景文字辨識競賽－高階賽：複雜街景之文�
 ![Public](./image/Public.png)
 ![Private](./image/Private.png)
 
+### requirements
+```
+pip install -r requirements.txt
+```
+
 ## Stage One: Detection 
 #### (Remember to modify the path of file to yours. e.g. cd yolov5)
 We use [yolov5](https://github.com/ultralytics/yolov5) to capture the text of the scene.
 
 YoloV5 extracts two types of objects from the scene, the first type is Chinese character and the second type is English\Numeric string or character.
 
-### requirements
-```
-pip install -r requirements.txt
-```
 ### preporcessing
 
 Please see Readme.md in the yolov5/preprocessing directory
