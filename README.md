@@ -37,7 +37,7 @@ We first crop the chinese character from images. (Remember to modify the path of
 ```
 python processing/crop_chinese_ch.py 
 ```
-Here are the characters we already cropped: (). 
+Here are the characters we already cropped: (https://drive.google.com/file/d/1flVnxIIRgn2akANQ1Jhix-AbFHrQpYaA/view?usp=sharing). 
 Download it and put it on the root of deep-text-recognition-benchmark.
 
 Then we create lmdb datasets, The output will default save at [./result] folder.
@@ -62,7 +62,7 @@ Every time you recognize the characters from crop images, please follow below:
 ```
 mkdir pred0 && mkdir pred1
 ```
-2. Download the weight on (), unzip it and put it on the root of deep-text-recognition-benchmark.
+2. Download the weight on (https://drive.google.com/file/d/1PIh6JoZ5rlc0_2itRVRgWjFeQUxp2wTr/view?usp=sharing), unzip it and put it on the root of deep-text-recognition-benchmark.
 3. modify --out_csv_name and --label_root to where you want to save and where the .txt files you save which detect by yolo, and run cmd.
 ```
 python recognize.py --Transformation TPS --FeatureExtraction ResNet --SequenceModeling BiLSTM --Prediction Attn --sensitive --out_csv_name recog_output/out.csv --label_root ../yolov5/runs/detect/exp/ --saved_model saved_models/TPS-ResNet-BiLSTM-Attn-Seed1111_1130/best_accuracy.pth 
