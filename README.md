@@ -2,7 +2,8 @@
 [![PWC](./image/t-brain_icon.png)](https://tbrain.trendmicro.com.tw/Competitions/Details/19)
 
 ## Rank 3 on Public and Private
-[(./image/t-brain_icon.png)]
+![Public](./image/t-brain_icon.png)
+![Private](./image/t-brain_icon.png)
 
 ## Stage One detection
 We use [yolov5](https://github.com/ultralytics/yolov5) to capture the text of the scene.
