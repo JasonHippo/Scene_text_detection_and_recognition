@@ -26,7 +26,7 @@ python train.py --img 1365 --rect --batch 8 --epochs 300 --data data/high_level.
 ```
 
 
-### Test
+### Inference
 
 Donwload our Training weights to test on private datasets (https://drive.google.com/drive/folders/1NkuSVJcCduJ1YiDAhk2xj4yzkRxn0CWs?usp=sharing)
 ```
@@ -62,7 +62,7 @@ python create_lmdb_dataset.py --inputPath data_tbrain_and_AE/val --gtFile data_t
 python train.py --train_data result/data_tbrain_and_AE/train/ --valid_data result/data_tbrain_and_AE/val/ --Transformation TPS --FeatureExtraction ResNet --SequenceModeling BiLSTM --Prediction Attn --sensitive
 ```
 
-### Recognize
+### Inference
 if there exist old pred0 and pred1 folder, please run this cmd
 ```
 rm -r pred0 && rm -r pred1
