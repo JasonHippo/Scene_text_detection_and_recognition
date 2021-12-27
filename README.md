@@ -105,7 +105,7 @@ run the following cmd (run cmd at root of Scene_text_detection_and_recognition)
 ```
 python utils/clahe.py --src_path [your folder] --dst_path [your folder]
 ```
-## Post-processing - Non-Maximum Suppression for combining two yolo model pros and cons  (NMS)
+## Post-processing - Non-Maximum Suppression for combining two yolo model pros and cons 
 
 Prepare the data as below structure:
 ```
