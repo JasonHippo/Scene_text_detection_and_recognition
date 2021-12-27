@@ -70,13 +70,13 @@ Every time you recognize the characters from crop images, please follow below:
 mkdir pred0 && mkdir pred1
 ```
 2. Download the weight on (https://drive.google.com/file/d/1PIh6JoZ5rlc0_2itRVRgWjFeQUxp2wTr/view?usp=sharing), unzip it and put it on the root of deep-text-recognition-benchmark.
-3. modify --out_csv_name and --label_root to where you want to save and where the .txt files you save which detect by yolo, and run cmd.
+3. modify --out_csv_name and --label_root to where you want to save and where the .txt files you save which detect by yolo, and download the private of public image of T-brain into ./images and run below cmd.
 ```
-python recognize.py --Transformation TPS --FeatureExtraction ResNet --SequenceModeling BiLSTM --Prediction Attn --sensitive --out_csv_name recog_output/out.csv --label_root ../yolov5/runs/detect/exp/ --saved_model saved_models/TPS-ResNet-BiLSTM-Attn-Seed1111_1130/best_accuracy.pth 
+python recognize.py --Transformation TPS --FeatureExtraction ResNet --SequenceModeling BiLSTM --Prediction Attn --sensitive --out_csv_name recog_output/out.csv --label_root ../yolov5/runs/detect/exp/ --img_path images/private/ --saved_model saved_models/TPS-ResNet-BiLSTM-Attn-Seed1111_1130/best_accuracy.pth 
 ```
 Now you can see the results at the path you set.
 
-### Post processing
+## Post processing
 For the T-brain competition, we need to follow the below steps:
 
 1. edit the --out_csv_name file, and add below header
@@ -84,13 +84,12 @@ For the T-brain competition, we need to follow the below steps:
 name,x1,y1,x2,y2,x3,y3,x4,y4,pred
 ```
 
-2. modify --path to path of --out_csv_name and run the cmd
+2. modify --path to path of --out_csv_name and run the cmd (run cmd at root of Scene_text_detection_and_recognition)
 ```
-python processing/editResult.py --path recog_output/out.csv
+python utils/editResult.py --path deep-text-recognition-benchmark/recog_output/out.csv
 ```
 
-You can see the post file at the recog_output/out_post.csv
-
+You can see the post file at the deep-text-recognition-benchmark/recog_output/out_post.csv
 
 ## Cite
 
