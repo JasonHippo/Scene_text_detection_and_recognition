@@ -6,7 +6,7 @@ T-Brain：繁體中文場景文字辨識競賽－高階賽：複雜街景之文�
 ![Public](./image/Public.png)
 ![Private](./image/Private.png)
 
-### requirements
+# requirements
 ```
 pip install -r requirements.txt
 ```
