@@ -19,7 +19,7 @@ YoloV5 extracts two types of objects from the scene, the first type is Chinese c
 
 ### preporcessing
 
-Please see Readme.md in the yolov5/preprocessing directory
+Please see README.md in the yolov5/preprocessing directory
 
 ### Train 
 ```
