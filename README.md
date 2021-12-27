@@ -28,7 +28,7 @@ Donwload our Training weights to test on private datasets (https://drive.google.
 python detect.py --source yolov5/datasets/high_level/images/private/ --weights yolov5/runs/train/exp4/weights/best.pt --img 1408 --save-txt --save-conf  --conf-thres 0.7 --iou-thres 0.45 --augment
 ```
 
-## Stage Two recognition
+## Stage Two recognition (Remember to modify the path of file to yours. e.g. cd deep-text-recognition-benchmark)
 We use [deep-text-recognitiom-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark) to recognize the text of the detected image.
 
 There are two models for this step, the first model is for Chinese character and the second is for English\Numeric string or character.
@@ -37,7 +37,7 @@ For the first model, we train on the training dataset of T-brain and ReCTS.
 
 For the second model, we use the pretrained of deep-text-recognitiom-benchmark.
 
-### Prepare the dataset (Remember to modify the path of file to yours. e.g. cd deep-text-recognition-benchmark)
+### Prepare the dataset 
 We first crop the chinese character from images. 
 ```
 python processing/crop_chinese_ch.py 
