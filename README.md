@@ -1,6 +1,7 @@
 # Scene_text_detection_and_recognition
 [![PWC](./image/t-brain_icon.png)](https://tbrain.trendmicro.com.tw/Competitions/Details/19)
 
+T-Brain：繁體中文場景文字辨識競賽－高階賽：複雜街景之文字定位與辨識
 ## Rank 3 on Public and Private
 ![Public](./image/Public.png)
 ![Private](./image/Private.png)
