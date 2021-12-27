@@ -76,6 +76,26 @@ python recognize.py --Transformation TPS --FeatureExtraction ResNet --SequenceMo
 ```
 Now you can see the results at the path you set.
 
+## Pre-processing: CLAHE
+modify --src_path to the folder of original image and modify --dst_path to path of the folder to store result image. 
+run the following cmd
+```
+python utils/clahe.py --src_path [your folder] --dst_path [your folder]
+```
+## Non-Maximum Suppression (NMS)
+
+Prepare the data as below structure:
+```
+-nms
+  ├ img         (store your original img)
+  ├ label1      (predict result from yolo_model1)
+  ├ label2      (predict result from yolo_model2)
+  └ nms_output  (store the result from nms(model1,model2))
+```
+run the following cmd
+```
+python nms/nms.py
+```
 ## Post processing
 For the T-brain competition, we need to follow the below steps:
 
