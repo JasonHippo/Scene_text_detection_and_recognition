@@ -104,6 +104,9 @@ python utils/editResult.py --path deep-text-recognition-benchmark/recog_output/o
 
 You can see the post file at the deep-text-recognition-benchmark/recog_output/out_post.csv
 
+Note: You need to delete the first row of out_post.csv when u want to upload this file to grading system
+
+
 
 ## U can do the following pre/post-processing (Optional)
 
