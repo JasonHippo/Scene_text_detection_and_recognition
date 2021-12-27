@@ -2,7 +2,6 @@
 
 ## Download the [T-brain](https://tbrain.trendmicro.com.tw/Competitions/Details/19) and [ReCTS](https://rrc.cvc.uab.es/?ch=12) Training datasets
 
-### 1
 Put the T-brain images and json to data/t-brain/img and data/t-brain/json, Put the ReCTS images and json to data/rects/img and data/rects/json
 
 Run the following commands to create txt for yolo training (The resuls will in the data/t-brain/yolotxt and  data/rects/yolotxt folder)
