@@ -45,10 +45,16 @@ For the first model, we train on the training dataset of T-brain and ReCTS.
 For the second model, we use the pretrained of deep-text-recognitiom-benchmark.
 
 ### Prepare the dataset 
-We first crop the chinese character from images. 
+We first crop the chinese character from T-brain images. 
 ```
 python processing/crop_chinese_ch.py 
 ```
+Then crop the chars from ReCTS training set.
+```
+python processing/crop_AE_ch.py
+```
+And we split the first 5000 words as validation set, the rest of wors are training set.
+
 Here are the characters we already cropped: (https://drive.google.com/file/d/1flVnxIIRgn2akANQ1Jhix-AbFHrQpYaA/view?usp=sharing). 
 Download it and put it on the root of deep-text-recognition-benchmark.
 
