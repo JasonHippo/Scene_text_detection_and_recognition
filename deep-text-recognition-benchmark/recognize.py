@@ -195,6 +195,6 @@ if __name__ == "__main__":
     
     opt.imgH = 32; opt.imgW = 100
     opt.character = string.printable[:-6]
-    opt.saved_model = "modules/TPS-ResNet-BiLSTM-Attn-case-sensitive.pth"
+    opt.saved_model = "saved_models/TPS-ResNet-BiLSTM-Attn-case-sensitive.pth"
     opt.image_folder = 'pred1/'
     demo(opt) 
