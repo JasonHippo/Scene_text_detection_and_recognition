@@ -23,7 +23,7 @@ for i in range(1, 15188+1):
                 if y2 > int(data["imageHeight"]): y2 = int(data["imageHeight"])
                 crop_img = img[y1:y2, x1:x2]
                 crop_img = cv2.resize(crop_img, (64, 64), interpolation=cv2.INTER_CUBIC)
-                cv2.imwrite("deep-text-recognition-benchmark/data_tbrain_and_AE/train/test/"+"word_{}.png".format(count), crop_img)
-                with open("deep-text-recognition-benchmark\data_tbrain_and_AE/train/gt.txt", 'a', encoding="utf-8") as txt:
+                cv2.imwrite("data_tbrain_and_AE/train/test/"+"word_{}.png".format(count), crop_img)
+                with open("data_tbrain_and_AE/train/gt.txt", 'a', encoding="utf-8") as txt:
                     txt.write("test/word_{}.png {}\n".format(count, shape["label"]))
     print("Done img_{}.png".format(i))
