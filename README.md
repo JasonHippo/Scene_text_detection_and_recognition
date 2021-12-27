@@ -78,7 +78,7 @@ Now you can see the results at the path you set.
 
 ## Pre-processing: CLAHE
 modify --src_path to the folder of original image and modify --dst_path to path of the folder to store result image. 
-run the following cmd
+run the following cmd (run cmd at root of Scene_text_detection_and_recognition)
 ```
 python utils/clahe.py --src_path [your folder] --dst_path [your folder]
 ```
@@ -92,7 +92,7 @@ Prepare the data as below structure:
   ├ label2      (predict result from yolo_model2)
   └ nms_output  (store the result from nms(model1,model2))
 ```
-run the following cmd
+run the following cmd (run cmd at root of Scene_text_detection_and_recognition)
 ```
 python nms/nms.py
 ```
