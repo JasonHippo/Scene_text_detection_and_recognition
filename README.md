@@ -5,7 +5,8 @@
 ![Public](./image/Public.png)
 ![Private](./image/Private.png)
 
-## Stage One detection (Remember to modify the path of file to yours. e.g. cd yolov5)
+## Stage One detection 
+#### (Remember to modify the path of file to yours. e.g. cd yolov5)
 We use [yolov5](https://github.com/ultralytics/yolov5) to capture the text of the scene.
 
 YoloV5 extracts two types of objects from the scene, the first type is Chinese character and the second type is English\Numeric string or character.
@@ -28,7 +29,8 @@ Donwload our Training weights to test on private datasets (https://drive.google.
 python detect.py --source yolov5/datasets/high_level/images/private/ --weights yolov5/runs/train/exp4/weights/best.pt --img 1408 --save-txt --save-conf  --conf-thres 0.7 --iou-thres 0.45 --augment
 ```
 
-## Stage Two recognition (Remember to modify the path of file to yours. e.g. cd deep-text-recognition-benchmark)
+## Stage Two recognition 
+#### (Remember to modify the path of file to yours. e.g. cd deep-text-recognition-benchmark)
 We use [deep-text-recognitiom-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark) to recognize the text of the detected image.
 
 There are two models for this step, the first model is for Chinese character and the second is for English\Numeric string or character.
