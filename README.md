@@ -1,5 +1,5 @@
 # Scene_text_detection_and_recognition
-[![PWC](https://tbrain.trendmicro.com.tw/Competitions/Details/19)](https://tbrain.trendmicro.com.tw/Competitions/Details/19)
+[![PWC](./image/t-brain_icon)](https://tbrain.trendmicro.com.tw/Competitions/Details/19)
 
 ## Stage One detection
 We use [yolov5](https://github.com/ultralytics/yolov5) to capture the text of the scene.
