@@ -10,6 +10,6 @@ python label2txt_tbrain.py
 python label2txt_rects.py
 ```
 
-Move all images to the yolov5/datasets/high_level/images and all txt to the yolov5/datasets/high_level/labels.
+Move all images to the yolov5/datasets/high_level/images and all txts to the yolov5/datasets/high_level/labels.
 
 Done!
