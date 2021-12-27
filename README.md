@@ -80,26 +80,7 @@ python recognize.py --Transformation TPS --FeatureExtraction ResNet --SequenceMo
 ```
 Now you can see the results at the path you set.
 
-## Pre-processing: CLAHE
-modify --src_path to the folder of original image and modify --dst_path to path of the folder to store result image. 
-run the following cmd (run cmd at root of Scene_text_detection_and_recognition)
-```
-python utils/clahe.py --src_path [your folder] --dst_path [your folder]
-```
-## Non-Maximum Suppression (NMS)
 
-Prepare the data as below structure:
-```
--nms
-  ├ img         (store your original img)
-  ├ label1      (predict result from yolo_model1)
-  ├ label2      (predict result from yolo_model2)
-  └ nms_output  (store the result from nms(model1,model2))
-```
-run the following cmd (run cmd at root of Scene_text_detection_and_recognition)
-```
-python nms/nms.py
-```
 ## Post processing
 For the T-brain competition, we need to follow the below steps:
 
@@ -114,6 +95,30 @@ python utils/editResult.py --path deep-text-recognition-benchmark/recog_output/o
 ```
 
 You can see the post file at the deep-text-recognition-benchmark/recog_output/out_post.csv
+
+
+## U can do the following pre/post-processing (Optional)
+
+## Pre-processing on raw image : CLAHE
+modify --src_path to the folder of original image and modify --dst_path to path of the folder to store result image. 
+run the following cmd (run cmd at root of Scene_text_detection_and_recognition)
+```
+python utils/clahe.py --src_path [your folder] --dst_path [your folder]
+```
+## Post-processing - Non-Maximum Suppression for combining two yolo model pros and cons  (NMS)
+
+Prepare the data as below structure:
+```
+-nms
+  ├ img         (store your original img)
+  ├ label1      (predict result from yolo_model1)
+  ├ label2      (predict result from yolo_model2)
+  └ nms_output  (store the result from nms(model1,model2))
+```
+run the following cmd (run cmd at root of Scene_text_detection_and_recognition)
+```
+python nms/nms.py
+```
 
 ## Cite
 
