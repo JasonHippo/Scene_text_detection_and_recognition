@@ -6,7 +6,7 @@ T-Brain：繁體中文場景文字辨識競賽－高階賽：複雜街景之文�
 ![Public](./image/Public.png)
 ![Private](./image/Private.png)
 
-## Stage One detection 
+## Stage One: Detection 
 #### (Remember to modify the path of file to yours. e.g. cd yolov5)
 We use [yolov5](https://github.com/ultralytics/yolov5) to capture the text of the scene.
 
@@ -33,7 +33,7 @@ Donwload our Training weights to test on private datasets (https://drive.google.
 python detect.py --source datasets/high_level/images/private/ --weights runs/train/exp4/weights/best.pt --img 1408 --save-txt --save-conf  --conf-thres 0.7 --iou-thres 0.45 --augment
 ```
 
-## Stage Two recognition 
+## Stage Two: Recognition 
 #### (Remember to modify the path of file to yours. e.g. cd deep-text-recognition-benchmark)
 We use [deep-text-recognitiom-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark) to recognize the text of the detected image.
 
