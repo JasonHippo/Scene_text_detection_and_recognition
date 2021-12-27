@@ -1,7 +1,8 @@
 # Scene_text_detection_and_recognition
+[![PWC](https://tbrain.trendmicro.com.tw/Competitions/Details/19)](https://tbrain.trendmicro.com.tw/Competitions/Details/19)
 
 ## Stage One detection
-We use yolov5 to capture the text of the scene.
+We use [yolov5](https://github.com/ultralytics/yolov5) to capture the text of the scene.
 
 YoloV5 extracts two types of objects from the scene, the first type is Chinese character and the second type is English\Numeric string or character.
 
@@ -24,7 +25,7 @@ python yolov5/detect.py --source yolov5/datasets/high_level/images/private/ --we
 ```
 
 ## Stage Two recognition
-We use deep-text-recognitiom-benchmark to recognize the text of the detected image.
+We use [deep-text-recognitiom-benchmark](https://github.com/clovaai/deep-text-recognition-benchmark) to recognize the text of the detected image.
 
 There are two models for this step, the first model is for Chinese character and the second is for English\Numeric string or character.
 
@@ -83,3 +84,17 @@ python processing/editResult.py --path recog_output/out.csv
 ```
 
 You can see the post file at the recog_output/out_post.csv
+
+
+## Cite
+
+```
+@inproceedings{baek2019STRcomparisons,
+  title={What Is Wrong With Scene Text Recognition Model Comparisons? Dataset and Model Analysis},
+  author={Baek, Jeonghun and Kim, Geewook and Lee, Junyeop and Park, Sungrae and Han, Dongyoon and Yun, Sangdoo and Oh, Seong Joon and Lee, Hwalsuk},
+  booktitle = {International Conference on Computer Vision (ICCV)},
+  year={2019},
+  pubstate={published},
+  tppubtype={inproceedings}
+}
+```
