@@ -51,7 +51,7 @@ python processing/crop_chinese_ch.py
 Here are the characters we already cropped: (https://drive.google.com/file/d/1flVnxIIRgn2akANQ1Jhix-AbFHrQpYaA/view?usp=sharing). 
 Download it and put it on the root of deep-text-recognition-benchmark.
 
-Then we create lmdb datasets, The output will default save at [./result] folder.
+Then we create l datasets, The output will default save at [./result] folder.
 ```
 python create_lmdb_dataset.py --inputPath data_tbrain_and_AE/val --gtFile data_tbrain_and_AE/val/gt.txt --outputPath result/data_tbrain_and_AE/val
 ```
