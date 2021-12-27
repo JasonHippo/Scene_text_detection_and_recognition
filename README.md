@@ -14,7 +14,7 @@ YoloV5 extracts two types of objects from the scene, the first type is Chinese c
 
 ### requirements
 ```
-pip install -r yolov5/requirements.txt
+pip install -r requirements.txt
 ```
 ### preporcessing
 
