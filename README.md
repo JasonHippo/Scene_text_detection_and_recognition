@@ -5,7 +5,7 @@
 ![Public](./image/Public.png)
 ![Private](./image/Private.png)
 
-## Stage One detection
+## Stage One detection (Remember to modify the path of file to yours. e.g. cd yolov5)
 We use [yolov5](https://github.com/ultralytics/yolov5) to capture the text of the scene.
 
 YoloV5 extracts two types of objects from the scene, the first type is Chinese character and the second type is English\Numeric string or character.
@@ -15,9 +15,9 @@ YoloV5 extracts two types of objects from the scene, the first type is Chinese c
 pip install -r yolov5/requirements.txt
 ```
 
-### Train
+### Train 
 ```
-python yolov5/train.py --img 1365 --rect --batch 8 --epochs 300 --data yolov5/data/high_level.yaml --weights yolov5/yolov5x6.pt --device 0
+python train.py --img 1365 --rect --batch 8 --epochs 300 --data yolov5/data/high_level.yaml --weights yolov5/yolov5x6.pt --device 0
 ```
 
 
@@ -25,7 +25,7 @@ python yolov5/train.py --img 1365 --rect --batch 8 --epochs 300 --data yolov5/da
 
 Donwload our Training weights to test on private datasets (https://drive.google.com/drive/folders/1NkuSVJcCduJ1YiDAhk2xj4yzkRxn0CWs?usp=sharing)
 ```
-python yolov5/detect.py --source yolov5/datasets/high_level/images/private/ --weights yolov5/runs/train/exp4/weights/best.pt --img 1408 --save-txt --save-conf  --conf-thres 0.7 --iou-thres 0.45 --augment
+python detect.py --source yolov5/datasets/high_level/images/private/ --weights yolov5/runs/train/exp4/weights/best.pt --img 1408 --save-txt --save-conf  --conf-thres 0.7 --iou-thres 0.45 --augment
 ```
 
 ## Stage Two recognition
@@ -37,8 +37,8 @@ For the first model, we train on the training dataset of T-brain and ReCTS.
 
 For the second model, we use the pretrained of deep-text-recognitiom-benchmark.
 
-### Prepare the dataset
-We first crop the chinese character from images. (Remember to modify the path of file to yours.)
+### Prepare the dataset (Remember to modify the path of file to yours. e.g. cd deep-text-recognition-benchmark)
+We first crop the chinese character from images. 
 ```
 python processing/crop_chinese_ch.py 
 ```
